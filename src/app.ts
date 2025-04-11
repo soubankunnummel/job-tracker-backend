@@ -15,10 +15,10 @@ app.use(cors());
 app.use("/api/v1/jobs", jobRoutes);
 
 // Cron Job: Runs every second
-cron.schedule("*/15 * * * * *", () => {
-    console.log("Cron job triggered every second");
-    // Add your logic here (e.g., database cleanup, sending notifications, etc.)
-  });
+cron.schedule("*/5 * * * * *", () => {
+  console.log("Cron job triggered every 5 seconds");
+  // Add your logic here (e.g., database cleanup, sending notifications, etc.)
+});
 app.use(errorHandler);
 
 export default app;
